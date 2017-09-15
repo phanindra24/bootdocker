@@ -1,0 +1,6 @@
+/home/zemoso/workspace/Zededup/kafak_template/templates/kafka-template/src/main/java/com/zemoso/kafka/SpringKafkaTemplateApplication.java
+/home/zemoso/workspace/Zededup/kafak_template/templates/kafka-template/src/main/java/com/zemoso/kafka/Producer/KafkaProducer.java
+/home/zemoso/workspace/Zededup/kafak_template/templates/kafka-template/src/main/java/com/zemoso/kafka/Producer/KafkaProducerConfig.java
+/home/zemoso/workspace/Zededup/kafak_template/templates/kafka-template/src/main/java/com/zemoso/kafka/Consumer/KafkaConsumerConfig.java
+/home/zemoso/workspace/Zededup/kafak_template/templates/kafka-template/src/main/java/com/zemoso/kafka/Consumer/KafkaConsumer.java
+/home/zemoso/workspace/Zededup/kafak_template/templates/kafka-template/src/main/java/com/zemoso/kafka/Gateway/MainController.java
