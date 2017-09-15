@@ -8,6 +8,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.zemoso.kafka.Consumer.KafkaConsumer;
 import com.zemoso.kafka.Producer.KafkaProducer;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -23,12 +24,15 @@ public class MainController {
     @Autowired
     private KafkaConsumer kafkaConsumer;
 
+    @Value("${topic.boot}")
+    private String topic;
+
 
 
     @ResponseBody
-    @RequestMapping(value ={"/{topic}/{subject}"}, method = RequestMethod.GET)
+    @RequestMapping(value ={"/{subject}"}, method = RequestMethod.GET)
 //    public ResponseEntity<Map> greeting(@RequestBody JsonNode json) {
-    public ResponseEntity<String> get(@PathVariable("topic") String topic,@PathVariable("subject") String subject) {
+    public ResponseEntity<String> get(@PathVariable("subject") String subject) {
         Map<String,Object> result = new HashMap<>();
 //        String topic = json.get("topic").asText();
 //        String subject = json.get("subject").asText();
@@ -48,7 +52,7 @@ public class MainController {
 //    public ResponseEntity<Map> greeting(@RequestBody JsonNode json) {
     public ResponseEntity<String> post(@RequestBody JsonNode json) {
         Map<String,Object> result = new HashMap<>();
-        String topic = json.get("topic").asText();
+//        String topic = json.get("topic").asText();
         String subject = json.get("subject").asText();
 
         kafkaProducer.send(topic, subject);
