@@ -21,3 +21,6 @@ nbbuild/
 dist/
 nbdist/
 .nb-gradle/
+target/generated-sources/
+target/generated-test-sources/
+target/test-classes/
