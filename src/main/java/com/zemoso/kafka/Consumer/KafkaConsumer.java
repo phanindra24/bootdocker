@@ -38,8 +38,7 @@ public class KafkaConsumer {
     @KafkaListener(topics = "${topic.boot}")
     public void receive(ConsumerRecord<?, ?> consumerRecord, @Header(KafkaHeaders.RECEIVED_PARTITION_ID) int partition) {
         LOGGER.info("received data='{}', partition = {}", consumerRecord.value(), partition);
-//return        consumerRecord.Value();
-//        latch.countDown();
+        latch.countDown();
     }
 }
 
