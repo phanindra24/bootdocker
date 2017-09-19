@@ -24,3 +24,6 @@ nbdist/
 target/generated-sources/
 target/generated-test-sources/
 target/test-classes/
+target/classes
+target/maven-archiver
+target/maven-status
